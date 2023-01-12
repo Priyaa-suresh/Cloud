@@ -1,0 +1,98 @@
+package experiment_1;
+
+               import java.util.Scanner;
+
+               public class operator2 {
+
+	   public static void main(String[] args) {
+			Scanner sc=new Scanner(System.in);
+			operator2 obj1=new operator2();
+			System.out.println("Enter the value a: ");
+			int a=sc.nextInt();
+			System.out.println("\nEnter the value b: ");
+			int b=sc.nextInt();
+			System.out.println("Enter the value c: ");
+			int c=sc.nextInt();
+			obj1.arithmetic(a,b);
+			obj1.relational(a,b);
+			obj1.assignment(a);
+			obj1.logical(a,b,c);
+			obj1.Unary(a);
+			obj1.ternary(a,b);
+			obj1.bitwise(a,b);
+			obj1.shift(a,b);
+
+			}
+			public void arithmetic(int a,int b)
+			{
+			System.out.println("\nArithmetic Operators\n");
+			System.out.println("a+b= "+(a+b));
+			System.out.println("a-b= "+(a-b));
+			System.out.println("a*b= "+(a*b));
+			System.out.println("a/b= "+(a/b));
+			System.out.println("a%b= "+(a%b));
+			}
+			public void relational(int a,int b)
+			{
+			System.out.println("\nRelational Operators");
+			System.out.println("a==b "+ (a == b));  
+			System.out.println("a!=b "+(a != b));  
+			System.out.println("a>b "+(a > b));
+			System.out.println("a<b "+(a < b));  
+			System.out.println("a>=b "+(a >= b));
+			System.out.println("a<=b "+(a <= b));
+			}
+			public void assignment(int a)
+			{
+			 System.out.println("\nAssignment operators\n");
+			 int var=a;
+			 System.out.println("var using =: " + var);
+			 var += a;
+			 System.out.println("var using +=: " + var);
+			 var *= a;
+			 System.out.println("var using *=: " + var);
+                                     }
+			public void logical(int a,int b,int c)
+			{
+			 System.out.println("\nLogical operators");
+			 System.out.println("(a > b) && (a > c)= "+((a > b) && (a >       c)));  
+			  System.out.println("(a > b) && (a < c)= "+((a > b) && (a < c)));
+			  System.out.println("(a < b) || (a > b)= "+((a < b) || (a > b)));  
+			  System.out.println("(a > b) || (a < b)= "+((a > b) || (a < b)));    
+			  System.out.println("!(a == b)= "+!(a == b));
+			}
+			public void Unary(int a)
+			{
+			  System.out.println("\nUnary operators");
+			  int result1, result2;
+			  System.out.println("Value of a: " + a); // increment operator
+			  result1 = ++a;
+			  System.out.println("After increment: " + result1);
+			  System.out.println("Value of a: " + a);// decrement operator
+			  result2 = --a;
+			  System.out.println("After decrement: " + result2);
+			}
+			public void ternary(int a,int b)
+			{
+			        int res=(a>b)?a:b;
+			        System.out.println("\nTernary Operators");
+			        System.out.println("Greater number is: "+res);
+			}
+			public void bitwise(int a,int b)
+			{
+			        System.out.println("\nBitwise Operators");
+			        System.out.println("a&b = " + (a & b));
+			        System.out.println("a|b = " + (a | b));
+			        System.out.println("a^b = " + (a ^ b));
+			        System.out.println("~a = " + ~a);
+			        a &= b;
+			        System.out.println("a= " + a);
+			}
+			public void shift(int a,int b)
+			{
+			        System.out.println("\n Shift Operators");
+			        System.out.println("a= "+a+"\t a<<2= ");
+			        System.out.println(a<<2);
+			        System.out.println("a= "+a+"\t a>>2= ");
+			        System.out.println(a>>2);
+			}}
